@@ -1,0 +1,44 @@
+<mujoco model="uoa_hand">
+    <compiler angle="degree" coordinate="local"/>
+    <option timestep="0.01" gravity="0 0 -9.81"/>
+
+    <default>
+	<geom type="mesh" rgba="0.6 0.6 0.9 0.2"/>
+	<joint type="hinge" limited="true" damping="0.05"/>
+	<site size="0.001" rgba="1 0 0 1"/>
+	<position ctrllimited="true" forcelimited="true" ctrlrange="0 0" forcerange="-0.4 0.4" kp="1" kv="0.001"/>
+    </default>
+    
+    <include file="assets.xml"/>
+    
+    <worldbody>
+	    
+	<body name="palm_1" pos="0 0 0">
+	    <geom type="mesh" mesh="palm_1" rgba="0.6 0.6 0.9 0.2"/>
+
+	    <include file="fingers/index.xml"/>
+	    <include file="fingers/middle.xml"/>
+
+	    
+	    <body name="palm_2" pos="0 0 0">
+		<geom type="mesh" mesh="palm_2" rgba="0.6 0.6 0.9 0.2"/>
+		<joint name="palm_1/palm_2" type="hinge" axis="-0.101 0 0.995" pos="-0.013426 -0.00 0.036848" limited="true" range="0 60"/>
+		<site name="palm_1/palm_2" pos="-0.013426 -0.00 0.036848" rgba="1 0 0 1" type="cylinder" euler="0 -5.807 0"/> 
+		<include file="fingers/thumb.xml"/>
+	    </body>
+
+	    <body name="palm_3" pos="0 0 0">
+		<joint name="palm_1/palm_3" type="hinge" axis="0.2026 0 0.9793" pos="0.01298 -0.002 0.03567" limited="true" range="-40 0"/>
+		<site name="palm_1/palm_3" pos="0.01298 -0.002 0.03567" rgba="1 0 0 1" type="cylinder" euler="0 11.687 0"/> 
+		<geom type="mesh" mesh="palm_3" rgba="0.6 0.6 0.9 0.2"/>
+
+		<include file="fingers/ring.xml"/>
+		<include file="fingers/pinky.xml"/>
+	    </body>
+
+	</body>
+
+    </worldbody>
+    
+    <include file="actuator.xml"/>
+</mujoco>

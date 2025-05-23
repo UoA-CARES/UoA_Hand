@@ -1,0 +1,23 @@
+<mujoco>
+    <body name="thumb_1" pos="0 0 0">
+	<geom type="mesh" mesh="thumb_1"/>
+	
+	<!--ball joint-->
+	<joint name="palm_2/thumb_1_1" type="hinge" axis="0.202 0 0.979" pos="-0.061157 -0.0165 0.037024" range="-30 30"/>
+	<joint name="palm_2/thumb_1_2" type="hinge" axis="0.202 -0.979 0" pos="-0.061157 -0.0165 0.037024" range="-60 20"/>
+	<site name="palm_2/thumb_1" pos="-0.061157 -0.0165 0.037024" rgba="1 0 0 1" type="sphere"/> 
+
+	<body name="thumb_2" pos="0 0 0">
+	    <geom type="mesh" mesh="thumb_2"/>
+	    <joint name="thumb_1/thumb_2" type="hinge" axis="0 1 0" pos="-0.101778 -0.016 0.0626" range="-10 80"/>
+	    <site name="thumb_1/thumb_2" pos="-0.101778 -0.016 0.0626" rgba="1 0 0 1" type="cylinder" euler="90 0 0"/> 
+
+	    <body name="thumb_3" pos="0 0 0">
+		<geom type="mesh" mesh="thumb_3"/>
+		<joint name="thumb_2/thumb_3" type="hinge" axis="0 1 0" pos="-0.12547 -0.016 0.077515" range="-10 80"/>
+		<site name="thumb_2/thumb_3" pos="-0.12547 -0.016 0.077515" rgba="1 0 0 1" type="cylinder" euler="90 0 0"/> 
+	    </body>
+	</body>
+
+    </body>
+</mujoco>

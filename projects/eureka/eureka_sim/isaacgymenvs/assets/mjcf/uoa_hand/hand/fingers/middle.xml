@@ -1,0 +1,25 @@
+<mujoco>
+    <body name="middle_1" pos="0 0 0">
+	<geom type="mesh" mesh="middle_1"/>
+	
+	<!--ball joint-->
+	<joint name="palm_1/middle_1_1" type="hinge" pos="0.019711 0.0 0.114262" axis="0 1 0" range="-20 20"/>
+	<joint name="palm_1/middle_1_2" type="hinge" pos="0.019711 0.0 0.114262" axis="0.9836 0 -0.1825" range="-10 80"/>
+	<site name="palm_1/middle_1" pos="0.019711 0.0 0.114262" rgba="1 0 0 1" type="sphere" euler="0 101.503 0"/> 
+
+	<body name="middle_2" pos="0 0 0">
+	    <geom type="mesh" mesh="middle_2"/>
+	    <joint name="middle_1/middle_2" type="hinge" pos="0.028923 0.0 0.163406" axis="0.9836 0 -0.1825" range="0 90"/>
+	    <site name="middle_1/middle_2" pos="0.028923 0.0 0.163406" rgba="1 0 0 1" type="cylinder" euler="0 101.503 0"/> 
+
+	    <body name="middle_3" pos="0 0 0">
+		<geom type="mesh" mesh="middle_3"/>
+		<joint name="middle_2/middle_3" type="hinge" pos="0.034223 0.0 0.1909" axis="0.9836 0 -0.1825" range="0 85"/>
+		<site name="middle_2/middle_3" pos="0.034223 0.0 0.1909" rgba="1 0 0 1" type="cylinder" euler="0 101.503 0"/> 
+	    </body>
+	</body>
+
+    </body>
+</mujoco>
+
+
