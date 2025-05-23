@@ -1,0 +1,34 @@
+<mujoco>
+
+    <actuator>
+      <position name="act_palm_2" joint="palm_1/palm_2" ctrlrange="0 60" kp="10"/>
+      <position name="act_palm_3" joint="palm_1/palm_3" ctrlrange="-40 0"/>
+
+
+      <position name="act_thumb_1_1" joint="palm_2/thumb_1_1" ctrlrange="-90 0"/>
+      <position name="act_thumb_1_2" joint="palm_2/thumb_1_2" ctrlrange="-90 0"/>
+      <position name="act_thumb_2" joint="thumb_1/thumb_2" ctrlrange="-90 0"/>
+      <position name="act_thumb_3" joint="thumb_2/thumb_3" ctrlrange="-90 0"/>
+
+      <position name="act_index_1_1" joint="palm_1/index_1_1" ctrlrange="-90 0"/>
+      <position name="act_index_1_2" joint="palm_1/index_1_2" ctrlrange="-90 0"/>
+      <position name="act_index_2" joint="index_1/index_2" ctrlrange="-90 0"/>
+      <position name="act_index_3" joint="index_2/index_3" ctrlrange="-90 0"/>
+
+      <position name="act_middle_1_1" joint="palm_1/middle_1_1" ctrlrange="-90 0"/>
+      <position name="act_middle_1_2" joint="palm_1/middle_1_2" ctrlrange="-90 0"/>
+      <position name="act_middle_2" joint="middle_1/middle_2" ctrlrange="-90 0"/>
+      <position name="act_middle_3" joint="middle_2/middle_3" ctrlrange="-90 0"/>
+
+      <position name="act_ring_1_1" joint="palm_2/ring_1_1" ctrlrange="-90 0"/>
+      <position name="act_ring_1_2" joint="palm_2/ring_1_2" ctrlrange="-90 0"/>
+      <position name="act_ring_2" joint="ring_1/ring_2" ctrlrange="-90 0"/>
+      <position name="act_ring_3" joint="ring_2/ring_3" ctrlrange="-90 0"/>
+
+      <position name="act_pinky_1_1" joint="palm_2/pinky_1_1" ctrlrange="-90 0"/>
+      <position name="act_pinky_1_2" joint="palm_2/pinky_1_2" ctrlrange="-90 0"/>
+      <position name="act_pinky_2" joint="pinky_1/pinky_2" ctrlrange="-90 0"/>
+      <position name="act_pinky_3" joint="pinky_2/pinky_3" ctrlrange="-90 0"/>
+
+    </actuator>
+</mujoco>
