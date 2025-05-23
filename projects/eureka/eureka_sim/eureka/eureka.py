@@ -79,6 +79,7 @@ def main(cfg):
         total_samples = 0
         total_token = 0
         total_completion_token = 0
+        # TODO: chunk_size
         chunk_size = cfg.sample if "gpt-3.5" in model else 4
 
         logging.info(f"Iteration {iter}: Generating {cfg.sample} samples with {cfg.model}")
@@ -189,7 +190,7 @@ def main(cfg):
             # Execute the python file with flags
             rl_filepath = f"env_iter{iter}_response{response_id}.txt"
             with open(rl_filepath, 'w') as f:
-                process = subprocess.Popen(['python', '-u', f'{ISAAC_ROOT_DIR}/train.py',  
+                process = subprocess.run(['python', '-u', f'{ISAAC_ROOT_DIR}/train.py',  
                                             'hydra/output=subprocess',
                                             f'task={task}{suffix}', f'wandb_activate={cfg.use_wandb}',
                                             f'wandb_entity={cfg.wandb_username}', f'wandb_project={cfg.wandb_project}',
@@ -208,7 +209,7 @@ def main(cfg):
         
         exec_success = False 
         for response_id, (code_run, rl_run) in enumerate(zip(code_runs, rl_runs)):
-            rl_run.communicate()
+            # rl_run.communicate()
             rl_filepath = f"env_iter{iter}_response{response_id}.txt"
             code_paths.append(f"env_iter{iter}_response{response_id}.py")
             try:
@@ -355,7 +356,7 @@ def main(cfg):
         # Execute the python file with flags
         rl_filepath = f"reward_code_eval{i}.txt"
         with open(rl_filepath, 'w') as f:
-            process = subprocess.Popen(['python', '-u', f'{ISAAC_ROOT_DIR}/train.py',  
+            process = subprocess.run(['python', '-u', f'{ISAAC_ROOT_DIR}/train.py',  
                                         'hydra/output=subprocess',
                                         f'task={task}{suffix}', f'wandb_activate={cfg.use_wandb}',
                                         f'wandb_entity={cfg.wandb_username}', f'wandb_project={cfg.wandb_project}',
@@ -369,7 +370,7 @@ def main(cfg):
     reward_code_final_successes = []
     reward_code_correlations_final = []
     for i, rl_run in enumerate(eval_runs):
-        rl_run.communicate()
+        # rl_run.communicate()
         rl_filepath = f"reward_code_eval{i}.txt"
         with open(rl_filepath, 'r') as f:
             stdout_str = f.read() 

@@ -2,20 +2,20 @@
 import sys
 import argparse
 from pathlib import Path
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 
 def paraphrase(string, num=1):
     messages = [
         {"role": "system", "content": "Please paraphrase the following instructions while preserving their meaning. Any words surrounded by {} should also appear in your result with a similar context."},
         {"role": "user", "content": string}
     ]
-    responses = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-16k-0613",
-        messages=messages,
-        temperature=0.7,
-        n=num,
-    )
-    return [choice["message"]["content"] for choice in responses["choices"]]
+    responses = client.chat.completions.create(model="gpt-3.5-turbo-16k-0613",
+    messages=messages,
+    temperature=0.7,
+    n=num)
+    return [choice["message"]["content"] for choice in responses.choices]
 
 if __name__ == "__main__":
     """
