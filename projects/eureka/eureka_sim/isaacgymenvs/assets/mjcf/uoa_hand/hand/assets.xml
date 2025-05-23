@@ -1,0 +1,31 @@
+<mujoco>
+    <default>
+	<mesh scale="0.001 0.001 0.001"/>
+    </default>
+
+    <asset>
+	<mesh name="palm_1" file="../stls/palm_1.stl"/>
+	<mesh name="palm_2" file="../stls/palm_2.stl"/>
+	<mesh name="palm_3" file="../stls/palm_3.stl"/>
+
+	<mesh name="thumb_1" file="../stls/thumb_1.stl"/>
+	<mesh name="thumb_2" file="../stls/thumb_2.stl"/>
+	<mesh name="thumb_3" file="../stls/thumb_3.stl"/>
+
+	<mesh name="index_1" file="../stls/index_1.stl"/>
+	<mesh name="index_2" file="../stls/index_2.stl"/>
+	<mesh name="index_3" file="../stls/index_3.stl"/>
+
+	<mesh name="middle_1" file="../stls/middle_1.stl"/>
+	<mesh name="middle_2" file="../stls/middle_2.stl"/>
+	<mesh name="middle_3" file="../stls/middle_3.stl"/>
+
+	<mesh name="ring_1" file="../stls/ring_1.stl"/>
+	<mesh name="ring_2" file="../stls/ring_2.stl"/>
+	<mesh name="ring_3" file="../stls/ring_3.stl"/>
+
+	<mesh name="pinky_1" file="../stls/pinky_1.stl"/>
+	<mesh name="pinky_2" file="../stls/pinky_2.stl"/>
+	<mesh name="pinky_3" file="../stls/pinky_3.stl"/>
+    </asset>   
+</mujoco>
