@@ -5,7 +5,7 @@
 	<!--ball joint-->
 	<joint name="palm_2/ring_1_1" type="hinge" pos="0.044666 -0.002 0.108066" axis="0 1 0" range="-20 20"/>
 	<joint name="palm_2/ring_1_2" type="hinge" pos="0.044666 -0.002 0.108066" axis="0.953 0 -0.303" range="-10 80"/>
-	<site name="palm_2/ring_1" pos="0.044666 -0.002 0.108066" rgba="1 0 0 1" type="sphere" euler="0 17.599 0"/> 
+	<site name="palm_2/ring_1" pos="0.044666 -0.002 0.108066" rgba="1 0 0 1" type="sphere" euler="0 107.599 0"/> 
 
 	<body name="ring_2" pos="0 0 0">
 	    <geom type="mesh" mesh="ring_2"/>
@@ -21,3 +21,4 @@
 
     </body>
 </mujoco>
+
