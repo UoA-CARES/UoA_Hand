@@ -83,7 +83,7 @@ class ShadowHand(VecTask):
             "openai": 42,
             "full_no_vel": 77,
             "full": 157,
-            "full_state": 211
+            "full_state": 92
         }
 
         self.up_axis = 'z'
@@ -503,29 +503,38 @@ class ShadowHand(VecTask):
             obs_end = fingertip_obs_start + num_ft_states + num_ft_force_torques
             self.states_buf[:, obs_end:obs_end + self.num_actions] = self.actions
         else:
+            # total = hand_dof(24) + hand_velocity(24) + object_pose(7) + object_linvel(3) + object_angvel(3) +
+            # goal_pose(7) + goal_rot(4) + actions(20) = 92
+
+
+            # self.num_shadow_hand_dofs = 24
             self.obs_buf[:, 0:self.num_shadow_hand_dofs] = unscale(self.shadow_hand_dof_pos,
                                                                    self.shadow_hand_dof_lower_limits, self.shadow_hand_dof_upper_limits)
             self.obs_buf[:, self.num_shadow_hand_dofs:2*self.num_shadow_hand_dofs] = self.vel_obs_scale * self.shadow_hand_dof_vel
-            self.obs_buf[:, 2*self.num_shadow_hand_dofs:3*self.num_shadow_hand_dofs] = self.force_torque_obs_scale * self.dof_force_tensor
+            
+            # TODO: BLOCK: force_torque_obs_scale is not defined in this context
+            # self.obs_buf[:, 2*self.num_shadow_hand_dofs:3*self.num_shadow_hand_dofs] = self.force_torque_obs_scale * self.dof_force_tensor
 
-            obj_obs_start = 3*self.num_shadow_hand_dofs  # 72
+            obj_obs_start = 2 * self.num_shadow_hand_dofs  # 48
             self.obs_buf[:, obj_obs_start:obj_obs_start + 7] = self.object_pose
             self.obs_buf[:, obj_obs_start + 7:obj_obs_start + 10] = self.object_linvel
             self.obs_buf[:, obj_obs_start + 10:obj_obs_start + 13] = self.vel_obs_scale * self.object_angvel
 
-            goal_obs_start = obj_obs_start + 13  # 85
+            goal_obs_start = obj_obs_start + 13  # 61
             self.obs_buf[:, goal_obs_start:goal_obs_start + 7] = self.goal_pose
             self.obs_buf[:, goal_obs_start + 7:goal_obs_start + 11] = quat_mul(self.object_rot, quat_conjugate(self.goal_rot))
 
-            num_ft_states = 13 * self.num_fingertips  # 65
-            num_ft_force_torques = 6 * self.num_fingertips  # 30
+            # TODO: BLOCK fingertip_obs_scale is not defined in this context
+            # num_ft_states = 13 * self.num_fingertips  # 65
+            # num_ft_force_torques = 6 * self.num_fingertips  # 30
 
-            fingertip_obs_start = goal_obs_start + 11  # 96
-            self.obs_buf[:, fingertip_obs_start:fingertip_obs_start + num_ft_states] = self.fingertip_state.reshape(self.num_envs, num_ft_states)
-            self.obs_buf[:, fingertip_obs_start + num_ft_states:fingertip_obs_start + num_ft_states +
-                         num_ft_force_torques] = self.force_torque_obs_scale * self.vec_sensor_tensor
+            # fingertip_obs_start = goal_obs_start + 11  # 96
+            # self.obs_buf[:, fingertip_obs_start:fingertip_obs_start + num_ft_states] = self.fingertip_state.reshape(self.num_envs, num_ft_states)
+            # self.obs_buf[:, fingertip_obs_start + num_ft_states:fingertip_obs_start + num_ft_states +
+            #              num_ft_force_torques] = self.force_torque_obs_scale * self.vec_sensor_tensor
 
-            obs_end = fingertip_obs_start + num_ft_states + num_ft_force_torques
+            # obs_end = fingertip_obs_start + num_ft_states + num_ft_force_torques
+            obs_end = goal_obs_start + 11  # 72
             self.obs_buf[:, obs_end:obs_end + self.num_actions] = self.actions
 
     def reset_target_pose(self, env_ids, apply_reset=False):

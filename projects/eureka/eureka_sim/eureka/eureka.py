@@ -360,7 +360,7 @@ def main(cfg):
                                         'hydra/output=subprocess',
                                         f'task={task}{suffix}', f'wandb_activate={cfg.use_wandb}',
                                         f'wandb_entity={cfg.wandb_username}', f'wandb_project={cfg.wandb_project}',
-                                        f'headless={not cfg.capture_video}', f'capture_video={cfg.capture_video}', 'force_render=False', f'seed={i}',
+                                        f'headless={not cfg.capture_video}', f'capture_video={cfg.capture_video}', 'force_render=False', f'seed={i}'
                                         ],
                                         stdout=f, stderr=f)
 

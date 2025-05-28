@@ -18,7 +18,7 @@
             "program": "${workspaceFolder}/eureka/eureka.py",
             "console": "integratedTerminal",
             "args": ["env=shadow_hand", "sample=4", "iteration=2", "max_iterations=3000", "model=gpt-4o"],
-            "cwd": "${workspaceFolder}/eureka"
+            "cwd": "${workspaceFolder}/eureka/"   
         },
         {
             "name": "allegro_hand",
@@ -27,7 +27,7 @@
             "program": "${workspaceFolder}/eureka/eureka.py",
             "console": "integratedTerminal",
             "args": ["env=allegro_hand", "sample=4", "iteration=2", "max_iterations=3000", "model=gpt-4o"],
-            "cwd": "${workspaceFolder}/eureka"
+            "cwd": "${workspaceFolder}/eureka/"
         },
         {
             "name": "demo_shadow_hand",

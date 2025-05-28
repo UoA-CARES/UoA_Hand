@@ -1,8 +1,0 @@
-- task=ShadowHandGPT
-- wandb_activate=False
-- wandb_entity=
-- wandb_project=
-- headless=True
-- capture_video=False
-- force_render=False
-- max_iterations=3000

@@ -83,7 +83,7 @@ class ShadowHandGPT(VecTask):
             "openai": 42,
             "full_no_vel": 77,
             "full": 157,
-            "full_state": 211
+            "full_state": 92
         }
 
         self.up_axis = 'z'
@@ -367,7 +367,7 @@ class ShadowHandGPT(VecTask):
         self.goal_object_indices = to_torch(self.goal_object_indices, dtype=torch.long, device=self.device)
 
     def compute_reward(self, actions):
-        self.rew_buf[:], self.rew_dict = quat_conjugate(self.q)
+        self.rew_buf[:], self.rew_dict = compute_reward(self.object_rot, self.goal_rot, self.object_angvel)
         self.extras['gpt_reward'] = self.rew_buf.mean()
         for rew_state in self.rew_dict: self.extras[rew_state] = self.rew_dict[rew_state].mean()
         self.rew_buf[:] = compute_bonus(
@@ -506,29 +506,38 @@ class ShadowHandGPT(VecTask):
             obs_end = fingertip_obs_start + num_ft_states + num_ft_force_torques
             self.states_buf[:, obs_end:obs_end + self.num_actions] = self.actions
         else:
+            # total = hand_dof(24) + hand_velocity(24) + object_pose(7) + object_linvel(3) + object_angvel(3) +
+            # goal_pose(7) + goal_rot(4) + actions(20) = 92
+
+
+            # self.num_shadow_hand_dofs = 24
             self.obs_buf[:, 0:self.num_shadow_hand_dofs] = unscale(self.shadow_hand_dof_pos,
                                                                    self.shadow_hand_dof_lower_limits, self.shadow_hand_dof_upper_limits)
             self.obs_buf[:, self.num_shadow_hand_dofs:2*self.num_shadow_hand_dofs] = self.vel_obs_scale * self.shadow_hand_dof_vel
-            self.obs_buf[:, 2*self.num_shadow_hand_dofs:3*self.num_shadow_hand_dofs] = self.force_torque_obs_scale * self.dof_force_tensor
+            
+            # TODO: BLOCK: force_torque_obs_scale is not defined in this context
+            # self.obs_buf[:, 2*self.num_shadow_hand_dofs:3*self.num_shadow_hand_dofs] = self.force_torque_obs_scale * self.dof_force_tensor
 
-            obj_obs_start = 3*self.num_shadow_hand_dofs  # 72
+            obj_obs_start = 2 * self.num_shadow_hand_dofs  # 48
             self.obs_buf[:, obj_obs_start:obj_obs_start + 7] = self.object_pose
             self.obs_buf[:, obj_obs_start + 7:obj_obs_start + 10] = self.object_linvel
             self.obs_buf[:, obj_obs_start + 10:obj_obs_start + 13] = self.vel_obs_scale * self.object_angvel
 
-            goal_obs_start = obj_obs_start + 13  # 85
+            goal_obs_start = obj_obs_start + 13  # 61
             self.obs_buf[:, goal_obs_start:goal_obs_start + 7] = self.goal_pose
             self.obs_buf[:, goal_obs_start + 7:goal_obs_start + 11] = quat_mul(self.object_rot, quat_conjugate(self.goal_rot))
 
-            num_ft_states = 13 * self.num_fingertips  # 65
-            num_ft_force_torques = 6 * self.num_fingertips  # 30
+            # TODO: BLOCK fingertip_obs_scale is not defined in this context
+            # num_ft_states = 13 * self.num_fingertips  # 65
+            # num_ft_force_torques = 6 * self.num_fingertips  # 30
 
-            fingertip_obs_start = goal_obs_start + 11  # 96
-            self.obs_buf[:, fingertip_obs_start:fingertip_obs_start + num_ft_states] = self.fingertip_state.reshape(self.num_envs, num_ft_states)
-            self.obs_buf[:, fingertip_obs_start + num_ft_states:fingertip_obs_start + num_ft_states +
-                         num_ft_force_torques] = self.force_torque_obs_scale * self.vec_sensor_tensor
+            # fingertip_obs_start = goal_obs_start + 11  # 96
+            # self.obs_buf[:, fingertip_obs_start:fingertip_obs_start + num_ft_states] = self.fingertip_state.reshape(self.num_envs, num_ft_states)
+            # self.obs_buf[:, fingertip_obs_start + num_ft_states:fingertip_obs_start + num_ft_states +
+            #              num_ft_force_torques] = self.force_torque_obs_scale * self.vec_sensor_tensor
 
-            obs_end = fingertip_obs_start + num_ft_states + num_ft_force_torques
+            # obs_end = fingertip_obs_start + num_ft_states + num_ft_force_torques
+            obs_end = goal_obs_start + 11  # 72
             self.obs_buf[:, obs_end:obs_end + self.num_actions] = self.actions
 
     def reset_target_pose(self, env_ids, apply_reset=False):
@@ -763,5 +772,31 @@ import math
 import torch
 from torch import Tensor
 @torch.jit.script
-def quat_conjugate(q: torch.Tensor) -> torch.Tensor:
-    return torch.cat((-q[..., 0:3], q[..., 3:4]), dim=-1)
+def compute_reward(object_rot: torch.Tensor, goal_rot: torch.Tensor, object_angvel: torch.Tensor) -> Tuple[torch.Tensor, Dict[str, torch.Tensor]]:
+    # Calculate the quaternion difference between the current and target orientations
+    orientation_diff = torch.sum(object_rot * goal_rot, dim=-1)
+    orientation_reward = torch.abs(orientation_diff)
+
+    # Transform the orientation reward for better feedback
+    orientation_temperature = 20.0  # Increased to make more impactful
+    transformed_orientation_reward = torch.exp(orientation_temperature * (orientation_reward - 1))
+
+    # Penalize angular velocity to encourage stabilization
+    angvel_penalty_scale = 0.05  # Reduced to balance its influence
+    angvel_penalty = angvel_penalty_scale * torch.norm(object_angvel, dim=-1)
+
+    # Reward for improved accuracy near target orientation
+    accuracy_bonus_temperature = 5.0
+    accuracy_bonus = torch.exp(accuracy_bonus_temperature * (orientation_reward - 0.95)) - 1.0
+
+    # Calculate the total reward as a combination of rewards and penalties
+    final_reward = transformed_orientation_reward + accuracy_bonus - angvel_penalty
+    reward_dict = {
+        "orientation_reward": orientation_reward,
+        "transformed_orientation_reward": transformed_orientation_reward,
+        "accuracy_bonus": accuracy_bonus,
+        "angvel_penalty": angvel_penalty,
+        "total_reward": final_reward
+    }
+
+    return final_reward, reward_dict

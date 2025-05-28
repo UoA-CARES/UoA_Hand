@@ -172,3 +172,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Local configuration files
+.idea
+.vscode
+
+# Local output directories
+outputs
+projects/eureka/eureka_sim/eureka/outputs
