@@ -179,4 +179,8 @@ cython_debug/
 
 # Local output directories
 outputs
+logs
+
+
+
 projects/eureka/eureka_sim/eureka/outputs

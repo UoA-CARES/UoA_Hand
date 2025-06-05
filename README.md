@@ -1,2 +1,2 @@
-# UoA_Hand
-Development repository for the UoA Hand.
+# UoA_Isaac_Lab
+
