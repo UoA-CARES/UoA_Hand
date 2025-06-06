@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="model">
+  <compiler angle="radian" coordinate="local" />
+  <asset>
+    <mesh name="carpal_bone_1_v42_1+Component58_1" file=".\meshes\carpal_bone_1_v42_1+Component58_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_finger_v8_1+middle_meta_v7_1" file=".\meshes\middle_finger_v8_1+middle_meta_v7_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_finger_v8_1+middle_pp_v12_1" file=".\meshes\middle_finger_v8_1+middle_pp_v12_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_finger_v8_1+middle_ip_v6_1" file=".\meshes\middle_finger_v8_1+middle_ip_v6_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_finger_v8_1+middle_dp_v7_1" file=".\meshes\middle_finger_v8_1+middle_dp_v7_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="Component1_v5_1+Component68_1" file=".\meshes\Component1_v5_1+Component68_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_finger_v3_1+index_meta_v38_1" file=".\meshes\index_finger_v3_1+index_meta_v38_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_finger_v3_1+index_pp_v46_1" file=".\meshes\index_finger_v3_1+index_pp_v46_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_finger_v3_1+index_ip_v52_1" file=".\meshes\index_finger_v3_1+index_ip_v52_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_finger_v3_1+index_dp_v45_1" file=".\meshes\index_finger_v3_1+index_dp_v45_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="carpal_bone_thumb_v47_1" file=".\meshes\carpal_bone_thumb_v47_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_finger_v12_1+thumb_meta_v9_1" file=".\meshes\thumb_finger_v12_1+thumb_meta_v9_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_finger_v12_1+thumb_pp_v6_1" file=".\meshes\thumb_finger_v12_1+thumb_pp_v6_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_finger_v12_1+thumb_ip_v10_1" file=".\meshes\thumb_finger_v12_1+thumb_ip_v10_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_finger_v12_1+thumb_dp_v6_1" file=".\meshes\thumb_finger_v12_1+thumb_dp_v6_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="carpal_bone_2_v20_1+Component43_1" file=".\meshes\carpal_bone_2_v20_1+Component43_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_finger_v10_1+pinky_meta_v4_1" file=".\meshes\pinky_finger_v10_1+pinky_meta_v4_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_finger_v10_1+pinky_pp_v6_1" file=".\meshes\pinky_finger_v10_1+pinky_pp_v6_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_finger_v10_1+pinky_ip_v10_1" file=".\meshes\pinky_finger_v10_1+pinky_ip_v10_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_finger_v10_1+pinky_dp_v10_1" file=".\meshes\pinky_finger_v10_1+pinky_dp_v10_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_finger_v12_1+ring_meta_v4_1" file=".\meshes\ring_finger_v12_1+ring_meta_v4_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_finger_v12_1+ring_pp_v5_1" file=".\meshes\ring_finger_v12_1+ring_pp_v5_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_finger_v12_1+ring_ip_v5_1" file=".\meshes\ring_finger_v12_1+ring_ip_v5_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_finger_v12_1+ring_dp_v5_1" file=".\meshes\ring_finger_v12_1+ring_dp_v5_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="Component1_v5_1+Component67_1" file=".\meshes\Component1_v5_1+Component67_1.stl" scale="0.001 0.001 0.001" />
+  </asset>
+  <worldbody>
+    <body name="root" pos="0 0 0" quat="1.0 0.0 0.0 0.0">
+      <body name="carpal_bone_1 v42:1+Component58:1" pos="-0.011000000000000001 -0.01 0.022500000000000006" quat="1.0 0.0 0.0 0.0">
+        <geom name="carpal_bone_1 v42:1+Component58:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="carpal_bone_1_v42_1+Component58_1" density="1060.0" />
+        <body name="middle_finger v8:1+middle_meta v7:1" pos="0.03071054715864273 0.010000000000000116 0.09176151683265117" quat="0.7041389153224608 -0.7041389153224618 0.06471775589824857 0.06471775589824856">
+          <geom name="middle_finger v8:1+middle_meta v7:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="middle_finger_v8_1+middle_meta_v7_1" density="1410.3789699025458" />
+          <body name="middle_finger v8:1+middle_pp v12:1" pos="-1.951563910473908e-18 0.0 8.32667268468862e-19" quat="3.1086579736553035e-16 2.3167442592564723e-16 1.1013558649433667e-16 0.9999999999999991">
+            <geom name="middle_finger v8:1+middle_pp v12:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="middle_finger_v8_1+middle_pp_v12_1" density="1060.0" />
+            <joint name="middle_finger v8:1+middle_pp v12:1_Ball 90" type="hinge" pos="-4.336808689942018e-19 0.0 -8.326672684688497e-19" axis="-0.999999999999977 -1.887379141862766e-15 4.990209960627201e-16" limited="true" range="0.0 1.5707963267948966" />
+            <joint name="middle_finger v8:1+middle_pp v12:1_Ball 91" type="hinge" pos="-4.336808689942018e-19 0.0 -8.326672684688497e-19" axis="8.326672684688674e-17 -0.9999999999999889 -1.4141499438000557e-16" limited="true" range="-0.17453292519943295 0.17453292519943295" />
+            <joint name="middle_finger v8:1+middle_pp v12:1_Ball 92" type="hinge" pos="-4.336808689942018e-19 0.0 -8.326672684688497e-19" axis="4.2767670763985447e-16 1.7624016344186593e-15 0.9999999999999966" limited="true" range="-0.17453292519943295 0.17453292519943295" />
+            <body name="middle_finger v8:1+middle_ip v6:1" pos="-0.0002999999999999468 0.04999999999999992 1.920162108729734e-18" quat="1.0000000000000016 -2.8979026572418025e-16 4.600107436729544e-16 1.0959375779985663e-15">
+              <geom name="middle_finger v8:1+middle_ip v6:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="middle_finger_v8_1+middle_ip_v6_1" density="3537.512594248249" />
+              <joint name="middle_finger v8:1+middle_ip v6:1_Revolute 100" type="hinge" pos="-0.004700000000000006 1.1102230246251565e-16 2.541689684299263e-19" axis="-0.9999999999999818 2.6645352591003757e-15 -7.787200590720722e-16" limited="true" range="0.0 1.5707963267948966" />
+              <body name="middle_finger v8:1+middle_dp v7:1" pos="-0.00040000000000000105 0.028000000000000136 2.3414085520939878e-18" quat="0.9999999999999983 -4.053114122709253e-16 -4.0869684809329195e-17 -9.716103254475608e-16">
+                <geom name="middle_finger v8:1+middle_dp v7:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="middle_finger_v8_1+middle_dp_v7_1" density="1060.0" />
+                <joint name="middle_finger v8:1+middle_dp v7:1_Revolute 110" type="hinge" pos="-0.0024000000000000197 -1.1102230246251565e-16 -1.0043178522622658e-18" axis="-0.9999999999999811 -1.2212453270876722e-15 -3.321703344291665e-16" limited="true" range="0.0 1.5707963267948966" />
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="Component1 v5:1+Component68:1" pos="-5.137912285774898e-05 1.734723475976807e-18 -0.00024839170416329076" quat="0.9999999999999994 -3.691795174210746e-16 2.0755628212678236e-16 9.04040760146775e-17">
+          <geom name="Component1 v5:1+Component68:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="Component1_v5_1+Component68_1" density="1060.0" />
+        </body>
+        <body name="index_finger v3:1+index_meta v38:1" pos="0.0054420117426501454 0.010000000000000005 0.021424982296739697" quat="-0.4934241201750233 0.4934241201750232 0.50649051089779 0.5064905108977908">
+          <geom name="index_finger v3:1+index_meta v38:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="index_finger_v3_1+index_meta_v38_1" density="1410.3795352590441" />
+          <body name="index_finger v3:1+index_pp v46:1" pos="0.07260000000000003 1.734723475976807e-18 4.793617412222435e-19" quat="0.7071067811865472 1.9819889473394444e-17 4.765695956279447e-17 -0.7071067811865471">
+            <geom name="index_finger v3:1+index_pp v46:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="index_finger_v3_1+index_pp_v46_1" density="5911.622228813378" />
+            <joint name="index_finger v3:1+index_pp v46:1_Ball 170" type="hinge" pos="1.734723475976807e-18 0.0 -4.793617412222429e-19" axis="-2.220446049250313e-16 0.9999999999999987 -3.34632575711316e-17" limited="true" range="-0.17453292519943295 0.17453292519943295" />
+            <joint name="index_finger v3:1+index_pp v46:1_Ball 171" type="hinge" pos="1.734723475976807e-18 0.0 -4.793617412222429e-19" axis="-0.9999999999999998 -2.185751579730777e-16 1.496799934130767e-17" limited="true" range="0.0 1.5707963267948966" />
+            <joint name="index_finger v3:1+index_pp v46:1_Ball 172" type="hinge" pos="1.734723475976807e-18 0.0 -4.793617412222429e-19" axis="-1.0066023164074069e-16 4.59351463808641e-17 1.0000000000000022" limited="true" range="-0.3490658503988659 0.3490658503988659" />
+            <body name="index_finger v3:1+index_ip v52:1" pos="-0.0003000000000000294 0.04800000000000007 4.241682529399029e-18" quat="1.0000000000000016 -5.99961909117958e-18 8.156097515037733e-17 7.254547731674266e-17">
+              <geom name="index_finger v3:1+index_ip v52:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="index_finger_v3_1+index_ip_v52_1" density="6218.063770970918" />
+              <joint name="index_finger v3:1+index_ip v52:1_Revolute 140" type="hinge" pos="-0.004699999999999951 0.0 -1.2944969299455527e-18" axis="-1.000000000000003 4.5102810375396984e-17 -2.1232487844920988e-16" limited="true" range="0.0 1.5707963267948966" />
+              <body name="index_finger v3:1+index_dp v45:1" pos="-0.0004000000000000132 0.027999999999999886 5.636019396159433e-18" quat="1.0000000000000007 9.033174551405185e-17 -3.8133783472864554e-17 5.415179646072874e-17">
+                <geom name="index_finger v3:1+index_dp v45:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="index_finger_v3_1+index_dp_v45_1" density="6257.553331310181" />
+                <joint name="index_finger v3:1+index_dp v45:1_Revolute 150" type="hinge" pos="-0.0023999999999999807 1.1102230246251565e-16 -5.635238770595271e-18" axis="-1.0000000000000089 1.734723475976807e-17 -6.182421403924745e-17" limited="true" range="0.0 1.5707963267948966" />
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="carpal_bone_thumb v47:1" pos="-0.00244127555833709 0.01 0.014496955282142246" quat="0.9987161095114985 -2.433751225072724e-17 -0.050657009408499626 -3.67559112846974e-17">
+          <geom name="carpal_bone_thumb v47:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="carpal_bone_thumb_v47_1" density="1060.0" />
+          <joint name="carpal_bone_thumb v47:1_Revolute 360" type="hinge" pos="-3.469446951953614e-18 1.3417393961002991e-21 0.003349999999999999" axis="-1.4988010832439613e-15 -4.1631112290137756e-16 0.9999999999999981" limited="true" range="0.0 1.2217304763960306" />
+          <body name="thumb_finger v12:1+thumb_meta v9:1" pos="-0.04746803306851826 -0.01650000000000005 0.005005129358860272" quat="-0.23021144975504473 0.6685825965441229 0.6685825965441224 -0.23021144975504568">
+            <geom name="thumb_finger v12:1+thumb_meta v9:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="thumb_finger_v12_1+thumb_meta_v9_1" density="1560.1501222996978" />
+            <body name="thumb_finger v12:1+thumb_pp v6:1" pos="0.0 -5.551115123125783e-17 1.734723475976807e-17" quat="-1.964180235915722e-17 -5.525678466651371e-16 9.550383797707049e-16 0.9999999999999989">
+              <geom name="thumb_finger v12:1+thumb_pp v6:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="thumb_finger_v12_1+thumb_pp_v6_1" density="1060.0" />
+              <joint name="thumb_finger v12:1+thumb_pp v6:1_Ball 120" type="hinge" pos="0.0 -5.551115123125783e-17 -6.938893903907228e-18" axis="-1.0000000000000053 -1.3365538925047478e-15 1.379504676438138e-15" limited="true" range="0.0 1.5707963267948966" />
+              <joint name="thumb_finger v12:1+thumb_pp v6:1_Ball 121" type="hinge" pos="0.0 -5.551115123125783e-17 -6.938893903907228e-18" axis="1.1460939575821466e-16 -0.9999999999999917 1.1102230246251565e-16" limited="true" range="-0.17453292519943295 0.17453292519943295" />
+              <joint name="thumb_finger v12:1+thumb_pp v6:1_Ball 122" type="hinge" pos="0.0 -5.551115123125783e-17 -6.938893903907228e-18" axis="-3.589776063098679e-15 -9.43689570931383e-15 0.9999999999999831" limited="true" range="-0.3490658503988659 0.3490658503988659" />
+              <body name="thumb_finger v12:1+thumb_ip v10:1" pos="-0.0003000000000000398 0.04799999999999997 -3.5930459996169617e-16" quat="0.9999999999999997 1.5831775195354497e-16 7.721489829790031e-17 -3.2999592179209105e-16">
+                <geom name="thumb_finger v12:1+thumb_ip v10:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="thumb_finger_v12_1+thumb_ip_v10_1" density="1235.4209452599473" />
+                <joint name="thumb_finger v12:1+thumb_ip v10:1_Revolute 100" type="hinge" pos="-0.0046999999999999716 2.7755575615628914e-17 3.5648567431323386e-16" axis="-1.0000000000000049 -2.815973351740792e-15 3.03536873504586e-15" limited="true" range="0.0 1.5707963267948966" />
+                <body name="thumb_finger v12:1+thumb_dp v6:1" pos="-0.00040000000000002187 0.028000000000000108 -7.24247051220317e-17" quat="0.9999999999999996 -1.1652338586196083e-15 -2.9615209173960086e-16 4.409448530717946e-16">
+                  <geom name="thumb_finger v12:1+thumb_dp v6:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="thumb_finger_v12_1+thumb_dp_v6_1" density="1060.0" />
+                  <joint name="thumb_finger v12:1+thumb_dp v6:1_Revolute 110" type="hinge" pos="-0.002399999999999982 -1.3877787807814457e-16 6.982261990806649e-17" axis="-1.0000000000000013 -1.4297884898671134e-15 3.9822607764954515e-15" limited="true" range="0.0 1.5707963267948966" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="carpal_bone_2 v20:1+Component43:1" pos="0.02060605623734733 -0.001999999999999948 -0.00032497752293376286" quat="0.9883694642471551 -5.192238435981406e-16 0.15207170066710954 8.614508421913683e-16">
+          <geom name="carpal_bone_2 v20:1+Component43:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="carpal_bone_2_v20_1+Component43_1" density="1060.0" />
+          <joint name="carpal_bone_2 v20:1+Component43:1_Revolute 370" type="hinge" pos="-0.0004850894715020433 0.010000000000000002 0.010402342003436246" axis="0.10118394271189418 2.7616870971711297e-15 -0.9948677347955717" limited="true" range="0.0 0.4363323129985824" />
+          <body name="pinky_finger v10:1+pinky_meta v4:1" pos="0.03413338459897605 0.009999999999999953 0.08602962190236858" quat="0.7031653237346126 -0.7031653237346094 0.07455553297507678 0.07455553297507858">
+            <geom name="pinky_finger v10:1+pinky_meta v4:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="pinky_finger_v10_1+pinky_meta_v4_1" density="1415.5307374457534" />
+            <body name="pinky_finger v10:1+pinky_pp v6:1" pos="-2.0816681711721685e-17 5.551115123125783e-17 1.431146867680866e-17" quat="3.0386024310232545e-16 -1.891563838367956e-16 6.242867446397565e-17 0.9999999999999994">
+              <geom name="pinky_finger v10:1+pinky_pp v6:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="pinky_finger_v10_1+pinky_pp_v6_1" density="1060.0" />
+              <joint name="pinky_finger v10:1+pinky_pp v6:1_Ball 90" type="hinge" pos="-1.214306433183765e-17 5.551115123125783e-17 -1.431146867680866e-17" axis="-0.9999999999999795 -2.609024107869118e-15 -2.1043267161379053e-15" limited="true" range="0.0 1.5707963267948966" />
+              <joint name="pinky_finger v10:1+pinky_pp v6:1_Ball 91" type="hinge" pos="-1.214306433183765e-17 5.551115123125783e-17 -1.431146867680866e-17" axis="3.3306690738754696e-16 -0.9999999999999895 1.8317771228139522e-16" limited="true" range="-0.17453292519943295 0.17453292519943295" />
+              <joint name="pinky_finger v10:1+pinky_pp v6:1_Ball 92" type="hinge" pos="-1.214306433183765e-17 5.551115123125783e-17 -1.431146867680866e-17" axis="1.3477011807907405e-15 -1.9238243506072625e-15 0.9999999999999842" limited="true" range="-0.3490658503988659 0.3490658503988659" />
+              <body name="pinky_finger v10:1+pinky_ip v10:1" pos="-0.0002999999999999583 0.048000000000000265 5.637851296924623e-18" quat="0.9999999999999998 1.0490681741052275e-15 -2.5166929230477258e-17 4.052916676973293e-16">
+                <geom name="pinky_finger v10:1+pinky_ip v10:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="pinky_finger_v10_1+pinky_ip_v10_1" density="1265.60600281942" />
+                <joint name="pinky_finger v10:1+pinky_ip v10:1_Revolute 100" type="hinge" pos="-0.0047000000000000566 -2.7755575615628914e-16 -1.3010426069826053e-18" axis="-0.9999999999999778 -6.661338147750939e-16 -1.912893392259008e-15" limited="true" range="0.0 1.5707963267948966" />
+                <body name="pinky_finger v10:1+pinky_dp v10:1" pos="-0.00040000000000002013 0.024999999999999883 8.673617379884035e-19" quat="1.000000000000001 8.58642116525575e-16 -2.1737499606539955e-16 4.4372021949743486e-16">
+                  <geom name="pinky_finger v10:1+pinky_dp v10:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="pinky_finger_v10_1+pinky_dp_v10_1" density="1060.0" />
+                  <joint name="pinky_finger v10:1+pinky_dp v10:1_Revolute 110" type="hinge" pos="-0.002399999999999977 8.326672684688674e-17 -4.336808689942018e-19" axis="-0.9999999999999801 8.881784197001252e-16 -1.6855713804110522e-15" limited="true" range="0.0 1.5707963267948966" />
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="ring_finger v12:1+ring_meta v4:1" pos="0.007670077407150236 0.009999999999999952 0.09196021468794116" quat="0.7071064858077792 -0.7071064858077746 0.0006463192514792128 0.0006463192514807385">
+            <geom name="ring_finger v12:1+ring_meta v4:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="ring_finger_v12_1+ring_meta_v4_1" density="1060.0" />
+            <body name="ring_finger v12:1+ring_pp v5:1" pos="1.9081958235744878e-17 -5.551115123125783e-17 1.3010426069826053e-18" quat="6.128386253683944e-16 6.284316486570126e-17 2.4869667358447113e-16 0.9999999999999997">
+              <geom name="ring_finger v12:1+ring_pp v5:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="ring_finger_v12_1+ring_pp_v5_1" density="1060.0" />
+              <joint name="ring_finger v12:1+ring_pp v5:1_Ball 110" type="hinge" pos="2.2551405187698492e-17 -4.163336342344337e-17 -1.3010426069826053e-18" axis="-0.9999999999999911 -1.27675647831893e-15 7.608553003233321e-16" limited="true" range="0.0 1.5707963267948966" />
+              <joint name="ring_finger v12:1+ring_pp v5:1_Ball 111" type="hinge" pos="2.2551405187698492e-17 -4.163336342344337e-17 -1.3010426069826053e-18" axis="1.6653345369377348e-16 -0.9999999999999925 -2.7390377210795594e-16" limited="true" range="-0.17453292519943295 0.17453292519943295" />
+              <joint name="ring_finger v12:1+ring_pp v5:1_Ball 112" type="hinge" pos="2.2551405187698492e-17 -4.163336342344337e-17 -1.3010426069826053e-18" axis="-5.09482640860528e-16 -3.145431616129826e-16 0.999999999999987" limited="true" range="-0.3490658503988659 0.3490658503988659" />
+              <body name="ring_finger v12:1+ring_ip v5:1" pos="-0.00030000000000010574 0.04799999999999999 -4.380176776841438e-17" quat="1.0 1.0225639279585247e-15 3.639403172987164e-16 5.839966611886279e-16">
+                <geom name="ring_finger v12:1+ring_ip v5:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="ring_finger_v12_1+ring_ip_v5_1" density="1060.0" />
+                <joint name="ring_finger v12:1+ring_ip v5:1_Revolute 90" type="hinge" pos="-0.004699999999999911 0.0 4.597017211338539e-17" axis="-0.9999999999999893 0.0 -2.9092783215223833e-17" limited="true" range="0.0 1.5707963267948966" />
+                <body name="ring_finger v12:1+ring_dp v5:1" pos="-0.00040000000000002187 0.027999999999999914 4.466912950640278e-17" quat="0.9999999999999996 8.051597460270133e-16 -4.870876429801836e-16 5.595504537907058e-16">
+                  <geom name="ring_finger v12:1+ring_dp v5:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="ring_finger_v12_1+ring_dp_v5_1" density="1060.0" />
+                  <joint name="ring_finger v12:1+ring_dp v5:1_Revolute 100" type="hinge" pos="-0.002399999999999982 5.551115123125783e-17 -4.380176776841438e-17" axis="-0.9999999999999903 9.992007221626409e-16 1.6036470854360039e-15" limited="true" range="0.0 1.5707963267948966" />
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="Component1 v5:1+Component67:1" pos="-0.019831871313917594 0.001999999999999858 -0.0067890573799118115" quat="0.98836946424716 7.258064120720384e-16 -0.15207170066711195 -5.885196016662e-16">
+            <geom name="Component1 v5:1+Component67:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="Component1_v5_1+Component67_1" density="1060.0" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <option />
+  <contact>
+    <exclude body1="root" body2="carpal_bone_1 v42:1+Component58:1" />
+    <exclude body1="carpal_bone_1 v42:1+Component58:1" body2="middle_finger v8:1+middle_meta v7:1" />
+    <exclude body1="middle_finger v8:1+middle_meta v7:1" body2="middle_finger v8:1+middle_pp v12:1" />
+    <exclude body1="middle_finger v8:1+middle_pp v12:1" body2="middle_finger v8:1+middle_ip v6:1" />
+    <exclude body1="middle_finger v8:1+middle_ip v6:1" body2="middle_finger v8:1+middle_dp v7:1" />
+    <exclude body1="carpal_bone_1 v42:1+Component58:1" body2="Component1 v5:1+Component68:1" />
+    <exclude body1="carpal_bone_1 v42:1+Component58:1" body2="index_finger v3:1+index_meta v38:1" />
+    <exclude body1="index_finger v3:1+index_meta v38:1" body2="index_finger v3:1+index_pp v46:1" />
+    <exclude body1="index_finger v3:1+index_pp v46:1" body2="index_finger v3:1+index_ip v52:1" />
+    <exclude body1="index_finger v3:1+index_ip v52:1" body2="index_finger v3:1+index_dp v45:1" />
+    <exclude body1="carpal_bone_1 v42:1+Component58:1" body2="carpal_bone_thumb v47:1" />
+    <exclude body1="carpal_bone_thumb v47:1" body2="thumb_finger v12:1+thumb_meta v9:1" />
+    <exclude body1="thumb_finger v12:1+thumb_meta v9:1" body2="thumb_finger v12:1+thumb_pp v6:1" />
+    <exclude body1="thumb_finger v12:1+thumb_pp v6:1" body2="thumb_finger v12:1+thumb_ip v10:1" />
+    <exclude body1="thumb_finger v12:1+thumb_ip v10:1" body2="thumb_finger v12:1+thumb_dp v6:1" />
+    <exclude body1="carpal_bone_1 v42:1+Component58:1" body2="carpal_bone_2 v20:1+Component43:1" />
+    <exclude body1="carpal_bone_2 v20:1+Component43:1" body2="pinky_finger v10:1+pinky_meta v4:1" />
+    <exclude body1="pinky_finger v10:1+pinky_meta v4:1" body2="pinky_finger v10:1+pinky_pp v6:1" />
+    <exclude body1="pinky_finger v10:1+pinky_pp v6:1" body2="pinky_finger v10:1+pinky_ip v10:1" />
+    <exclude body1="pinky_finger v10:1+pinky_ip v10:1" body2="pinky_finger v10:1+pinky_dp v10:1" />
+    <exclude body1="carpal_bone_2 v20:1+Component43:1" body2="ring_finger v12:1+ring_meta v4:1" />
+    <exclude body1="ring_finger v12:1+ring_meta v4:1" body2="ring_finger v12:1+ring_pp v5:1" />
+    <exclude body1="ring_finger v12:1+ring_pp v5:1" body2="ring_finger v12:1+ring_ip v5:1" />
+    <exclude body1="ring_finger v12:1+ring_ip v5:1" body2="ring_finger v12:1+ring_dp v5:1" />
+    <exclude body1="carpal_bone_2 v20:1+Component43:1" body2="Component1 v5:1+Component67:1" />
+  </contact>
+  <default />
+  <actuator>
+    <position name="middle_finger v8:1+middle_pp v12:1_Ball 90_actuator" joint="middle_finger v8:1+middle_pp v12:1_Ball 90" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="middle_finger v8:1+middle_pp v12:1_Ball 91_actuator" joint="middle_finger v8:1+middle_pp v12:1_Ball 91" ctrlrange="-0.17453292519943295 0.17453292519943295" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="middle_finger v8:1+middle_pp v12:1_Ball 92_actuator" joint="middle_finger v8:1+middle_pp v12:1_Ball 92" ctrlrange="-0.17453292519943295 0.17453292519943295" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="middle_finger v8:1+middle_ip v6:1_Revolute 100_actuator" joint="middle_finger v8:1+middle_ip v6:1_Revolute 100" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="middle_finger v8:1+middle_dp v7:1_Revolute 110_actuator" joint="middle_finger v8:1+middle_dp v7:1_Revolute 110" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="index_finger v3:1+index_pp v46:1_Ball 170_actuator" joint="index_finger v3:1+index_pp v46:1_Ball 170" ctrlrange="-0.17453292519943295 0.17453292519943295" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="index_finger v3:1+index_pp v46:1_Ball 171_actuator" joint="index_finger v3:1+index_pp v46:1_Ball 171" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="index_finger v3:1+index_pp v46:1_Ball 172_actuator" joint="index_finger v3:1+index_pp v46:1_Ball 172" ctrlrange="-0.3490658503988659 0.3490658503988659" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="index_finger v3:1+index_ip v52:1_Revolute 140_actuator" joint="index_finger v3:1+index_ip v52:1_Revolute 140" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="index_finger v3:1+index_dp v45:1_Revolute 150_actuator" joint="index_finger v3:1+index_dp v45:1_Revolute 150" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="carpal_bone_thumb v47:1_Revolute 360_actuator" joint="carpal_bone_thumb v47:1_Revolute 360" ctrlrange="0.0 1.2217304763960306" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="thumb_finger v12:1+thumb_pp v6:1_Ball 120_actuator" joint="thumb_finger v12:1+thumb_pp v6:1_Ball 120" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="thumb_finger v12:1+thumb_pp v6:1_Ball 121_actuator" joint="thumb_finger v12:1+thumb_pp v6:1_Ball 121" ctrlrange="-0.17453292519943295 0.17453292519943295" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="thumb_finger v12:1+thumb_pp v6:1_Ball 122_actuator" joint="thumb_finger v12:1+thumb_pp v6:1_Ball 122" ctrlrange="-0.3490658503988659 0.3490658503988659" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="thumb_finger v12:1+thumb_ip v10:1_Revolute 100_actuator" joint="thumb_finger v12:1+thumb_ip v10:1_Revolute 100" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="thumb_finger v12:1+thumb_dp v6:1_Revolute 110_actuator" joint="thumb_finger v12:1+thumb_dp v6:1_Revolute 110" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="carpal_bone_2 v20:1+Component43:1_Revolute 370_actuator" joint="carpal_bone_2 v20:1+Component43:1_Revolute 370" ctrlrange="0.0 0.4363323129985824" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="pinky_finger v10:1+pinky_pp v6:1_Ball 90_actuator" joint="pinky_finger v10:1+pinky_pp v6:1_Ball 90" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="pinky_finger v10:1+pinky_pp v6:1_Ball 91_actuator" joint="pinky_finger v10:1+pinky_pp v6:1_Ball 91" ctrlrange="-0.17453292519943295 0.17453292519943295" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="pinky_finger v10:1+pinky_pp v6:1_Ball 92_actuator" joint="pinky_finger v10:1+pinky_pp v6:1_Ball 92" ctrlrange="-0.3490658503988659 0.3490658503988659" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="pinky_finger v10:1+pinky_ip v10:1_Revolute 100_actuator" joint="pinky_finger v10:1+pinky_ip v10:1_Revolute 100" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="pinky_finger v10:1+pinky_dp v10:1_Revolute 110_actuator" joint="pinky_finger v10:1+pinky_dp v10:1_Revolute 110" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="ring_finger v12:1+ring_pp v5:1_Ball 110_actuator" joint="ring_finger v12:1+ring_pp v5:1_Ball 110" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="ring_finger v12:1+ring_pp v5:1_Ball 111_actuator" joint="ring_finger v12:1+ring_pp v5:1_Ball 111" ctrlrange="-0.17453292519943295 0.17453292519943295" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="ring_finger v12:1+ring_pp v5:1_Ball 112_actuator" joint="ring_finger v12:1+ring_pp v5:1_Ball 112" ctrlrange="-0.3490658503988659 0.3490658503988659" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="ring_finger v12:1+ring_ip v5:1_Revolute 90_actuator" joint="ring_finger v12:1+ring_ip v5:1_Revolute 90" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+    <position name="ring_finger v12:1+ring_dp v5:1_Revolute 100_actuator" joint="ring_finger v12:1+ring_dp v5:1_Revolute 100" ctrlrange="0.0 1.5707963267948966" ctrllimited="true" kp="1" forcerange="-10 10" />
+  </actuator>
+  <include file="contacts.xml" />
+  <include file="defaults.xml" />
+</mujoco>

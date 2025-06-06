@@ -32,3 +32,6 @@
 
     </actuator>
 </mujoco>
+
+
+torque = 0.92/0.8 * current *ratio * 0.8

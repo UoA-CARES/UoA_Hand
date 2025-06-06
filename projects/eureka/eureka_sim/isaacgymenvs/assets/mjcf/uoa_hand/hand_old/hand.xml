@@ -2,13 +2,7 @@
     <compiler angle="degree" coordinate="local"/>
     <option timestep="0.01" gravity="0 0 -9.81"/>
 
-    <default>
-	<geom type="mesh" rgba="0.6 0.6 0.9 0.4"/>
-	<joint type="hinge" limited="true" damping="0.05"/>
-	<site size="0.001" rgba="1 0 0 1"/>
-	<position ctrllimited="true" forcelimited="true" ctrlrange="0 0" forcerange="-0.4 0.4" kp="1" kv="0.001"/>
-    </default>
-    
+    <include file="defaults.xml"/> 
     <include file="assets.xml"/>
 
     <worldbody>
