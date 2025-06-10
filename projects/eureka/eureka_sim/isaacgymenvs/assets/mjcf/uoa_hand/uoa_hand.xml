@@ -33,7 +33,7 @@
   </asset>
   <default />
   <worldbody>
-    <body name="root" pos="0.0000 0.0000 0.0000" quat="1.00000 0.00000 0.00000 0.00000">
+    <body name="root" pos="0.0000 0.0000 0.0000" euler="0 1.57079 -1.57079">
       <body name="carpal_bone_1:1+Component58:1" pos="-0.0110 -0.0100 0.0225" quat="1.00000 0.00000 0.00000 0.00000">
         <geom name="carpal_bone_1:1+Component58:1_geom" type="mesh" pos="0 0 0" quat="1.0 0.0 0.0 0.0" mesh="carpal_bone_1_1+Component58_1" density="1060.0" />
         <body name="middle_finger:1+middle_meta v7:1" pos="0.0307 0.0100 0.0918" quat="0.70414 -0.70414 0.06472 0.06472">
