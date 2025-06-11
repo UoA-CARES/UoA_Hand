@@ -1,0 +1,48 @@
+/home/lee/code/UoA_Hand/repose/shadowhands
+├── .dockerignore
+├── .flake8
+├── .gitattributes
+├── .gitignore
+├── .pre-commit-config.yaml
+├── README.md
+├── scripts
+│   ├── list_envs.py
+│   ├── random_agent.py
+│   ├── rl_games
+│   │   ├── play.py
+│   │   └── train.py
+│   └── zero_agent.py
+├── source
+│   └── shadowhands
+│       ├── config
+│       │   └── extension.toml
+│       ├── docs
+│       │   └── CHANGELOG.rst
+│       ├── pyproject.toml
+│       ├── setup.py
+│       └── shadowhands
+│           ├── __init__.py
+│           ├── tasks
+│           │   ├── __init__.py
+│           │   └── manager_based
+│           │       ├── __init__.py
+│           │       └── shadowhands
+│           │           ├── agents
+│           │           │   ├── __init__.py
+│           │           │   └── rl_games_ppo_cfg.yaml
+│           │           ├── __init__.py
+│           │           ├── mdp
+│           │           │   ├── __init__.py
+│           │           │   └── rewards.py
+│           │           └── shadowhands_env_cfg.py
+│           └── ui_extension_example.py
+└── .vscode
+    ├── extensions.json
+    ├── .gitignore
+    ├── tasks.json
+    └── tools
+        ├── launch.template.json
+        ├── settings.template.json
+        └── setup_vscode.py
+
+14 directories, 31 files
